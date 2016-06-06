@@ -1,11 +1,15 @@
 (function() {
   'use strict';
 
-  angular.module('app.', ['ngRoute'])
-      .config(['$routeProvider', function($routeProvider) {
-        $routeProvider.when('/', {
-          templateUrl: 'js/modules/.html',
-          controller: ''
+    angular.module('app.homePage', [
+        'ngRoute'
+    ])
+
+    .config(['$routeProvider', function($routeProvider) {
+        $routeProvider.when('/home', {
+            templateUrl: 'partials/homePage.html',
+            controller: 'HomeController',
+            controllerAs: 'homeCtrl'
         });
-      }])
+    }]);
 })();
