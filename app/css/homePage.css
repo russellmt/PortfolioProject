@@ -1,0 +1,32 @@
+.home-page .employee {
+    margin: 10px;
+    border: solid black 1px;
+    width: 300px;
+    display: inline-table;
+}
+
+.home-page label {
+    display: block;
+    padding: 5px;
+    border-bottom: solid black 1px;
+}
+
+.home-page label.lavi {
+    background: linear-gradient(to bottom, #a0dd75, #b7ff89);
+}
+
+.home-page label.russell {
+    background: linear-gradient(to bottom, #8cd89d, #a6ffb8);
+}
+
+.home-page label.dillon {
+    background: linear-gradient(to bottom, #9bc5e5, #addfff);
+}
+
+.home-page a {
+    color: black;
+}
+
+.home-page a:hover {
+    text-shadow: 1px 1px #979797;
+}
