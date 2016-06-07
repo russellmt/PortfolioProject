@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+}
+
+header {
+    font-weight: 200;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: linear-gradient(to bottom, #c2d1d1, #e1f0f0);
+    padding: 10px;
+    border-bottom: solid black 1px;
+    margin-bottom: 10px;
+}
+
+.indented {
+    margin-left: 30px;
+}
+
+a {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    text-decoration: none;
+    cursor: pointer;
+}
