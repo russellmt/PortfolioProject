@@ -1,3 +1,14 @@
+.home-page-container {
+    display: table;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.home-page {
+    margin: 15% 0 0 20%;
+}
+
 .home-page .employee {
     margin: 10px;
     border: solid black 1px;
@@ -9,6 +20,7 @@
     display: block;
     padding: 5px;
     border-bottom: solid black 1px;
+    text-align: center;
 }
 
 .home-page label.lavi {
