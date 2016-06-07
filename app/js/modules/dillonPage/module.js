@@ -1,11 +1,10 @@
 (function() {
-  'use strict';
+    'use strict';
 
-  angular.module('app.', ['ngRoute'])
-      .config(['$routeProvider', function($routeProvider) {
-        $routeProvider.when('/', {
-          templateUrl: 'js/modules/.html',
-          controller: ''
-        });
-      }])
+    angular.module('app.dillonPage', ['ngRoute'])
+        .config(['$routeProvider', function($routeProvider) {
+            $routeProvider.when('/dillon', {
+                templateUrl: 'partials/dillonPage.html'
+            });
+        }])
 })();

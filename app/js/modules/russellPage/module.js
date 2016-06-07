@@ -1,11 +1,10 @@
 (function() {
   'use strict';
 
-  angular.module('app.', ['ngRoute'])
+  angular.module('app.russellPage', ['ngRoute'])
       .config(['$routeProvider', function($routeProvider) {
-        $routeProvider.when('/', {
-          templateUrl: 'js/modules/.html',
-          controller: ''
+        $routeProvider.when('/russell', {
+          templateUrl: 'partials/russellPage.html'
         });
       }])
 })();

@@ -4,7 +4,9 @@
     angular.module('app', [
         'ngRoute',
         'app.homePage',
-        'app.laviPage'
+        'app.laviPage',
+        'app.russellPage',
+        'app.dillonPage'
     ])
     .config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
         $locationProvider.hashPrefix('!');
