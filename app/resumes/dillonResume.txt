@@ -27,7 +27,10 @@ Los Angeles Valley College
 Associates Degree, Computer Science, pending
 
 ~Projects:
-My projects are made using different API’s and are done without the aid of a pre-made game engine. Decided to take the longer approach of learning the individual aspects of the game mechanics by handling them personally myself. Among these game mechanics is inertia, accelerating, gravity, simplistic AI, animation, tile based maps, frame regulation, collision, and an even greater understanding of memory optimization. These can be viewed within my website below.
+My projects are made using different API’s and are done without the aid of a pre-made game engine.
+Decided to take the longer approach of learning the individual aspects of the game mechanics by handling them personally myself.
+Among these game mechanics is inertia, accelerating, gravity, simplistic AI, animation, tile based maps, frame regulation, collision, and an even greater understanding of memory optimization.
+These can be viewed within my website below.
 Website: https://www.sites.google.com/site/onmysparetimedesigns/home/thegame
 
 ~Experience: 
