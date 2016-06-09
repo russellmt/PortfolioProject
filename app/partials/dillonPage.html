@@ -1,9 +1,14 @@
+
+
 <div class="dillon-page-container">
     <div class="dillon-page">
+
         {{resumeCtrl.readFile('../../../resumes/dillonResume.txt')}}
-        {{resumeCtrl.decodeFile()}}
-        <div ng-if="resumeCtrl.allTextLines.length == 1" ng-repeat="asd in resumeCtrl.allTextLines">
-            {{asd}}
+
+        <div ng-repeat="curLine in resumeCtrl.allTextLines track by $index"
+             ng-class="resumeCtrl.decodeLine(curLine)"
+        >
+            {{curLine}}
         </div>
     </div>
 </div>

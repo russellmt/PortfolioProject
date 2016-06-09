@@ -22,28 +22,25 @@
             rawFile.send(null);
         };
         
-        this.decodeFile = function() {
+        this.decodeLine = function(_curLine) {
+            var className = '';
+            var category = 'category';
+            var bold = 'bold';
             debugger;
-            for(var lineElement in this.allTextLines) {
-                var curLine = this.allTextLines[lineElement];
-                
-                for(var charElement in curLine) {
-                    var char = curLine[charElement];
-                    switch (char) {
-                        case 'asd':
-                            break;
+            for(var charElement in _curLine) {
+                var char = _curLine[charElement];
+                switch (char) {
+                    case '~':
+                        className += category;
+                        break;
 
-                        case 'aaa':
-                            break;
-                    }
+                    case ':':
+                        className += className ? (' ' + bold): bold;
+                        return;
                 }
-                
             }
-
+            return className;
         };
 
-        // this.readFile('../../../resumes/dillonResume.txt');
-        // this.decodeFile();
-        // debugger;
     }]);
 })();
