@@ -1,52 +1,77 @@
-.home-page-container {
-    display: table;
+.home-page {
     position: absolute;
     height: 100%;
     width: 100%;
 }
 
-.home-page {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-}
-
 .home-page-row {
-    margin-left: auto;
-    margin-right: auto;
     text-align: center;
-    display: inline-block;
+    position: absolute;
+    width: 100%;
+    top: 40%;
 }
 
 .home-page-row .employee {
-    border: solid black 1px;
-    width: 300px;
+    width: 20%;
+    height: 15%;
     display: inline-table;
 }
 
 .home-page-row label {
+    border: solid white 1px;
+    border-radius: 5px;
     display: block;
     padding: 5px;
-    border-bottom: solid black 1px;
     text-align: center;
+    color: black;
+    background-color: rgba(160, 221, 117, 0.6);
+    cursor: pointer;
+}
+
+@keyframes imageSlide {
+    to {
+        top: 0;
+    }
+}
+
+.img-container {
+    overflow: hidden;
+}
+
+.img-container img {
+    position: relative;
+    /*top: -200px;*/
 }
 
 .home-page-row label.lavi {
-    background: linear-gradient(to bottom, #a0dd75, #b7ff89);
 }
 
 .home-page-row label.russell {
-    background: linear-gradient(to bottom, #8cd89d, #a6ffb8);
+    /*background: linear-gradient(to bottom, #8cd89d, #a6ffb8);*/
 }
 
 .home-page-row label.dillon {
-    background: linear-gradient(to bottom, #9bc5e5, #addfff);
+    /*background: linear-gradient(to bottom, #9bc5e5, #addfff);*/
 }
 
 .home-page-row a {
+    font-family: "Raleway Thin", sans-serif;
     color: black;
 }
 
 .home-page-row a:hover {
-    text-shadow: 1px 1px #979797;
+
+}
+
+#bg {
+    background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+canvas{
+    position: absolute;
+    z-index: -1;
 }

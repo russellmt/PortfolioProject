@@ -18,3 +18,33 @@ a {
     text-decoration: none;
     cursor: pointer;
 }
+
+@font-face {
+    font-family: "Anson";
+    src: url(../fonts/anson-regular-webfont.woff);
+}
+
+@font-face {
+    font-family: "Caviar Dreams";
+    src: url(../fonts/CaviarDreams.ttf);
+}
+
+@font-face {
+    font-family: "Clear Sans";
+    src: url(../fonts/ClearSans-Regular-webfont.woff);
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(../fonts/OpenSans-CondLight-webfont.woff);
+}
+
+@font-face {
+    font-family: "Raleway";
+    src: url(../fonts/Raleway-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Raleway Thin";
+    src: url(../fonts/Raleway-Thin.ttf);
+}
