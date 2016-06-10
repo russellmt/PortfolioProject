@@ -8,7 +8,6 @@
         this.allTextLineOnjects = [];
 
         this.removeLine = function () {
-            debugger;
             this.allTextLineOnjects.pop();
         };
 
@@ -37,8 +36,8 @@
 
         this.decodeLine = function(_curLine) {
             var className = '';
-            var category = 'category';
-            var bold = 'bold';
+            var category = 'fade';
+            var bold = 'rotate';
 
             for(var i = 0, length = _curLine.length; length > 1 && i < 2; i++) {
                 var char = _curLine[i];

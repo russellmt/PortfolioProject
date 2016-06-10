@@ -20,8 +20,19 @@
     <body>
         <div ng-view></div>
 
+        <!-- Bower libraries -->
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-route/angular-route.js"></script>
+        <!--local angular-animate (bower instal --save angular-animate)-->
+        <!--<script src="bower_components/angular-animate/angular-animate.js"></script>-->
+
+        <!-- Animation libraries -->
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.6/angular-animate.js"></script>
+
+        <script src="greensock/TweenMax.min.js"></script>
+        <script src="greensock/MorphSVGPlugin.min.js"></script>
+        <script src="ui/jquery.particleground.min.js"></script>
 
         <script src="js/modules/app/module.js"></script>
 
@@ -29,18 +40,11 @@
         <script src="js/modules/homePage/controllers/homeController.js"></script>
 
         <script src="js/modules/laviPage/module.js"></script>
-        <!--<script src="js/modules/russellPage/module.js"></script>-->
-
-        <!-- Animation libraries -->
-        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-        <script src="greensock/TweenMax.min.js"></script>
-        <script src="greensock/MorphSVGPlugin.min.js"></script>
-        <script src="ui/jquery.particleground.min.js"></script>
 
         <script src="js/modules/russellPage/module.js"></script
         >
         <script src="js/modules/dillonPage/module.js"></script>
-        <script src="js/modules/dillonPage/directives/resumeLine.js"></script>
         <script src="js/modules/dillonPage/controllers/resumeController.js"></script>
+        <script src="js/modules/dillonPage/animations/animation.js"></script>
     </body>
 </html>

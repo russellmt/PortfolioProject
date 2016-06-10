@@ -5,3 +5,20 @@
 .bold{
     color: yellow;
 }
+
+
+
+/*.box {*/
+    /*background: #5FCF80;*/
+/*}*/
+/*.box:hover {*/
+    /*transform: rotate(360deg);*/
+    /*background: #9351A6;*/
+    /*border-radius: 50%;*/
+/*}*/
+/*.rotate {*/
+    /*transition: all 0.5s ease-in-out;*/
+/*}*/
+/*.rotate:hover {*/
+    /*transition: all 1s ease-in-out;*/
+/*}*/

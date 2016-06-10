@@ -1,9 +1,7 @@
-<div class="dillon-page-container">
-    <div class="dillon-page">
-    </div>
+<div class="container">
 
-    <div ng-repeat="curLine in resumeCtrl.allTextLineOnjects track by $index"
-                 ng-class="resumeCtrl.decodeLine(curLine.line)" ng-bind="curLine.line"
+    <div ng-repeat="textObject in resumeCtrl.allTextLineOnjects track by $index"
+         ng-class="resumeCtrl.decodeLine(textObject.line)" ng-bind="textObject.line"
     >
     </div>
 
