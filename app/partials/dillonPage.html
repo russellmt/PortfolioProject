@@ -1,14 +1,11 @@
-
-
 <div class="dillon-page-container">
     <div class="dillon-page">
-
-        {{resumeCtrl.readFile('../../../resumes/dillonResume.txt')}}
-
-        <div ng-repeat="curLine in resumeCtrl.allTextLines track by $index"
-             ng-class="resumeCtrl.decodeLine(curLine)"
-        >
-            {{curLine}}
-        </div>
     </div>
+
+    <div ng-repeat="curLine in resumeCtrl.allTextLineOnjects track by $index"
+                 ng-class="resumeCtrl.decodeLine(curLine.line)" ng-bind="curLine.line"
+    >
+    </div>
+
+    <button ng-click="resumeCtrl.removeLine()">remove</button>
 </div>

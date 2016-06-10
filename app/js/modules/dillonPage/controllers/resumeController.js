@@ -4,31 +4,44 @@
     angular.module('app.dillonPage')
 
     .controller('resumeController', [function () {
-        var allTextInCurFile = '';
-        this.allTextLines = [];
         var me = this;
-        
+        this.allTextLineOnjects = [];
+
+        this.removeLine = function () {
+            debugger;
+            this.allTextLineOnjects.pop();
+        };
+
         this.readFile = function (fileName) {
             var rawFile = new XMLHttpRequest();
             rawFile.open("GET", fileName, false);
             rawFile.onreadystatechange = function () {
                 if(rawFile.readyState === 4) {
                     if(rawFile.status === 200 || rawFile.status == 0) {
-                        allTextInCurFile = rawFile.responseText;
-                        me.allTextLines = allTextInCurFile.split('\n');
+                        var resumeTextArray = rawFile.responseText.split('\n');
+                        resumeTextArray.reverse();
+
+                        for (var element in resumeTextArray) {
+                            var line = resumeTextArray[element];
+                            me.allTextLineOnjects.push({
+                                line: line
+                            });
+                        }
                     }
                 }
             };
             rawFile.send(null);
         };
-        
+
+        this.readFile('../../../resumes/dillonResume.txt');
+
         this.decodeLine = function(_curLine) {
             var className = '';
             var category = 'category';
             var bold = 'bold';
-            debugger;
-            for(var charElement in _curLine) {
-                var char = _curLine[charElement];
+
+            for(var i = 0, length = _curLine.length; length > 1 && i < 2; i++) {
+                var char = _curLine[i];
                 switch (char) {
                     case '~':
                         className += category;
@@ -36,7 +49,7 @@
 
                     case ':':
                         className += className ? (' ' + bold): bold;
-                        return;
+                        return className;
                 }
             }
             return className;
