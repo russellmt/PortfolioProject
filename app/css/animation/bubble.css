@@ -1,0 +1,15 @@
+.bubble {
+    position: absolute;
+    z-index: 2;
+    visibility: hidden;
+}
+
+.bubbleFrame2, .bubbleFrame3 {
+    visibility: hidden;
+}
+
+@keyframes bubbleFloat {
+    to {
+        top: -150px;
+    }
+}

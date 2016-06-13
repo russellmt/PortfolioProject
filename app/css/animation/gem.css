@@ -1,0 +1,11 @@
+.gem {
+    position: absolute;
+    z-index: 2;
+    visibility: hidden;
+}
+
+@keyframes emeraldFall {
+    to {
+        top: 110%;
+    }
+}

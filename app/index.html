@@ -8,7 +8,9 @@
     <!--[if gt IE 8]><!--> <html lang="en" ng-app="app" class="no-js"> <!--<![endif]-->
     <link rel="stylesheet" type="text/css" href="css/app.css" />
     <link rel="stylesheet" type="text/css" href="css/homePage.css" />
-    <link rel="stylesheet" type="text/css" href="css/loading.css" />
+    <link rel="stylesheet" type="text/css" href="css/animation/loading.css" />
+    <link rel="stylesheet" type="text/css" href="css/animation/bubble.css" />
+    <link rel="stylesheet" type="text/css" href="css/animation/gem.css" />
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,17 +26,29 @@
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-route/angular-route.js"></script>
 
-        <script src="js/modules/app/module.js"></script>
-        <!--<script src="js/modules/dillonPage/module.js"></script>-->
-        <script src="js/modules/homePage/module.js"></script>
-        <script src="js/modules/homePage/controllers/homeController.js"></script>
-        <script src="js/modules/laviPage/module.js"></script>
-        <!--<script src="js/modules/russellPage/module.js"></script>-->
-
         <!-- Animation libraries -->
         <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
         <script src="greensock/TweenMax.min.js"></script>
         <script src="greensock/MorphSVGPlugin.min.js"></script>
         <script src="ui/jquery.particleground.min.js"></script>
+
+        <!-- App Module (eventually there will only be one) -->
+        <script src="js/modules/app/module.js"></script>
+        <!--<script src="js/modules/dillonPage/module.js"></script>-->
+        <script src="js/modules/homePage/module.js"></script>
+        <script src="js/modules/laviPage/module.js"></script>
+
+        <!-- Directives -->
+        <script src="js/directives/animation/loading.js"></script>
+        <script src="js/directives/animation/bubble.js"></script>
+        <script src="js/directives/animation/gem.js"></script>
+
+        <!-- Services -->
+        <script src="js/services/animation/bubbleService.js"></script>
+        <script src="js/services/animation/gemService.js"></script>
+
+        <!-- Controllers -->
+        <script src="js/modules/homePage/controllers/homeController.js"></script>
+        <!--<script src="js/modules/russellPage/module.js"></script>-->
     </body>
 </html>
