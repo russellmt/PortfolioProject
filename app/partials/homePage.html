@@ -33,13 +33,5 @@
         </div>
     </div>
 </div>
-<bubble-animation bubbleid="'bubble0'"></bubble-animation>
-<bubble-animation bubbleid="'bubble1'"></bubble-animation>
-<bubble-animation bubbleid="'bubble2'"></bubble-animation>
-<emerald-animation></emerald-animation>
-<emerald-animation></emerald-animation>
-<emerald-animation></emerald-animation>
-<emerald-animation></emerald-animation>
-<emerald-animation></emerald-animation>
-<emerald-animation></emerald-animation>
-<loading-animation></loading-animation>
+<bubble-animation ng-repeat="i in homeCtrl.getNumber(10) track by $index" bubbleid="'bubble' + $index"></bubble-animation>
+<emerald-animation ng-repeat="j in homeCtrl.getNumber(15) track by $index"></emerald-animation>

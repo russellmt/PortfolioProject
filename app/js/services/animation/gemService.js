@@ -18,7 +18,7 @@
                 emerald.style.left = randomSpawnLeft + '%';
                 emerald.style.top = randomSpawnTop + '%';
                 emerald.style.visibility = 'visible';
-                emerald.style.animation = 'emeraldFall 750ms forwards ease-in';
+                emerald.style.animation = 'emeraldFall 1200ms forwards ease-in';
             }
         };
 
