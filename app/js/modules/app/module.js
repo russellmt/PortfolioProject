@@ -8,6 +8,7 @@
     ])
     .config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
         $locationProvider.hashPrefix('!');
+        //some Comment push check
 
         $routeProvider.otherwise({
             redirectTo: '/home'
