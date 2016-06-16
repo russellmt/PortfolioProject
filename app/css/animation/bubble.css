@@ -1,0 +1,21 @@
+.bubble {
+    position: absolute;
+    z-index: -1;
+    visibility: hidden;
+}
+
+.bubbleFrame2, .bubbleFrame3 {
+    visibility: hidden;
+}
+
+@keyframes bubbleFloat {
+    to {
+        top: -150px;
+    }
+}
+
+@keyframes fadeToBlue {
+    to {
+        background-color: rgba(67, 182, 228, 0.5);
+    }
+}

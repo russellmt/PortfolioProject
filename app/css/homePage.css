@@ -2,6 +2,13 @@
     position: absolute;
     height: 100%;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+@keyframes fadeToDefault {
+    to {
+        background-color: rgba(0, 0, 0, 0);
+    }
 }
 
 .home-page-row {
@@ -14,6 +21,7 @@
 .home-page-row .employee {
     width: 20%;
     height: 15%;
+    margin: 2px;
     display: inline-table;
 }
 
@@ -28,19 +36,13 @@
     cursor: pointer;
 }
 
-@keyframes imageSlide {
-    to {
-        top: 0;
-    }
-}
-
-.img-container {
+.employee-contents {
     overflow: hidden;
 }
 
-.img-container img {
+.employee-contents .employee-wipe {
     position: relative;
-    /*top: -200px;*/
+    top: -250px;
 }
 
 .home-page-row label.lavi {
@@ -54,6 +56,20 @@
     /*background: linear-gradient(to bottom, #9bc5e5, #addfff);*/
 }
 
+.home-page-row .employee .employee-wipe {
+    transition-duration: 250ms;
+    -webkit-transition-duration: 250ms;
+    -moz-transition-duration: 250ms;
+    top: -250px;
+}
+
+.home-page-row .employee:hover .employee-wipe {
+    transition-duration: 250ms;
+    -webkit-transition-duration: 250ms;
+    -moz-transition-duration: 250ms;
+    top: 0;
+}
+
 .home-page-row a {
     font-family: "Raleway Thin", sans-serif;
     color: black;
@@ -61,6 +77,14 @@
 
 .home-page-row a:hover {
 
+}
+
+.employee-title {
+    font-family: "Caviar Dreams", sans-serif;
+}
+
+img.face {
+    width: 90%;
 }
 
 #bg {
