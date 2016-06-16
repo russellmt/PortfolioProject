@@ -1,0 +1,31 @@
+<div ng-class="'Outer'">
+  <div ng-class="'Middle'">
+
+    <ul id="menu">
+      <button ng-repeat="(key, value) in GameCtrl.eachCategoryObject" ng-click="GameCtrl.openSection(key)">
+        {{key}}
+      </button>
+    </ul>
+
+    <div id="animationDisplay">
+      <div ng-repeat="textObject in GameCtrl.allTextLineOnjects track by $index"
+           ng-class="textObject.className + ' Line'" ng-bind="textObject.line"
+      >
+      </div>
+
+      <div id="ship" ng-class="GameCtrl.centerPathClass">
+        &nbsp;
+      </div>
+    </div>
+    <div id="controls">
+      <div id="movementControls">
+        <input ng-click="GameCtrl.moveLeft($event)" type="button" value="Move Left"/>
+        <input ng-click="GameCtrl.center($event)" type="button" value="Center"/>
+        <input ng-click="GameCtrl.moveRight($event)" type="button" value="Move Right"/>
+      </div>
+      <div id="shootControls">
+        <input ng-click="GameCtrl.shoot($event)" type="button" value="Shoot"/>
+      </div>
+    </div>
+  </div>
+</div>
