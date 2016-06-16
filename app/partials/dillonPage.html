@@ -1,8 +1,17 @@
 <div class="container">
 
-    <div ng-repeat="textObject in resumeCtrl.allTextLineOnjects track by $index"
-         ng-class="resumeCtrl.decodeLine(textObject.line)" ng-bind="textObject.line"
-    >
+    <ul id="menu">
+        <button ng-repeat="(key, value) in resumeCtrl.eachCategoryObject" ng-click="resumeCtrl.openSection(key)">
+            {{key}}
+        </button>
+    </ul>
+
+
+    <div class="resumeContainer">
+        <div ng-repeat="textObject in resumeCtrl.allTextLineOnjects track by $index"
+             ng-class="textObject.className" ng-bind="textObject.line"
+        >
+        </div>
     </div>
 
     <button ng-click="resumeCtrl.removeLine()">remove</button>
