@@ -3,7 +3,7 @@
 
     var defaultBgColor = 'rgba(0,0,0,0)';
 
-    angular.module('app.homePage')
+    angular.module('app')
 
     .controller('HomeController', ['$timeout', 'dataService', 'bubbleService', 'gemService', function ($timeout, dataService, bubbleService, gemService) {
         var animationServiceMap = {

@@ -95,9 +95,9 @@ app/                    --> all of the source files for the application
     view1_test.js         --> tests of the controller
   view2/                --> the view2 view template and logic
     view2.html            --> the partial template
-    module.js              --> the controller logic
+    app.js              --> the controller logic
     view2_test.js         --> tests of the controller
-  module.js                --> main application module
+  app.js                --> main application module
   index.html            --> app layout file (the main html template file of the app)
   index-async.html      --> just like index.html, but loads js files asynchronously
 karma.conf.js         --> config file for running unit tests with Karma
