@@ -35,6 +35,8 @@
             var firstClass = 'fade';
             var resumeTextArray = _rawFile.responseText.split('\n');
 
+            var categoryLevel = new CategoryLevel();
+
             for (var element in resumeTextArray) {
                 var curLine = resumeTextArray[element];
                 var char = curLine[0];
@@ -44,6 +46,7 @@
                         curCategory = curLine;
                         curCategory = curCategory.trim().slice(1, curCategory.length);
                         this.eachCategoryObject[curCategory] = [];
+                        //categoryLevel.addCategory(curCategory);
                         break;
                     default:
                         if(curCategory) {
@@ -51,6 +54,7 @@
                                 line: curLine,
                                 className: firstClass
                             });
+                            //categoryLevel.addDataToLastCategory(curCategory, firstClass, curLine);
                         }
                 }
             }
