@@ -31,7 +31,7 @@
 
         this.formatRawFile = function(_rawFile) {
             var curCategory = '';
-            var subjectChar = '~';
+            var categoryChar = '~';
             var firstClass = 'fade';
             var resumeTextArray = _rawFile.responseText.split('\n');
 
@@ -39,21 +39,23 @@
 
             for (var element in resumeTextArray) {
                 var curLine = resumeTextArray[element];
-                var char = curLine[0];
+                var firstChar = curLine[0];
 
-                switch (char) {
-                    case subjectChar:
+                switch (firstChar) {
+
+                    case categoryChar:
                         curCategory = curLine;
-                        curCategory = curCategory.trim().slice(1, curCategory.length);
+                        curCategory = curCategory.trim().slice(1);
                         this.eachCategoryObject[curCategory] = [];
                         //categoryLevel.addCategory(curCategory);
                         break;
                     default:
                         if(curCategory) {
-                            this.eachCategoryObject[curCategory].push({
-                                line: curLine,
-                                className: firstClass
-                            });
+                            var newDiv = {
+                              line: curLine,
+                              className: firstClass
+                            };
+                            this.eachCategoryObject[curCategory].push(newDiv);
                             //categoryLevel.addDataToLastCategory(curCategory, firstClass, curLine);
                         }
                 }
