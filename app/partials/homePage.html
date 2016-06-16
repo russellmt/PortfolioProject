@@ -1,37 +1,21 @@
 <div class="home-page" id="bg">
     <div class="home-page-row">
-
-        <div class="employee" ng-mouseenter="homeCtrl.handleEmployeeEnter('lavi')" ng-mouseleave="homeCtrl.handleEmployeeLeave('lavi')">
-            <a href="#!/lavi">
-                <label class="lavi">Lavi Johnson</label>
+        <div class="employee" ng-repeat="employee in homeCtrl.employees"
+             ng-mouseenter="homeCtrl.handleEmployeeEnter(employee.id)" ng-mouseleave="homeCtrl.handleEmployeeLeave(employee.id)">
+            <a ng-href="#!/{{ employee.id }}">
+                <label ng-class="employee.id">{{ employee.name }}</label>
             </a>
             <div class="employee-contents">
                 <div class="employee-wipe">
-                    <img src="../svg/russell_cartoon.svg" width="300" height="175" />
-                    <div class="employee-title">&quot;You are correct!&quot;</div>
+                    <img ng-src="../svg/russell_cartoon.svg" class="face" />
+                    <div class="employee-title">&quot;{{ employee.quote }}&quot;</div>
                 </div>
             </div>
-        </div>
-
-        <div class="employee" ng-mouseenter="homeCtrl.handleEmployeeEnter('russell')" ng-mouseleave="homeCtrl.handleEmployeeLeave('russell')">
-            <a href="#!/russell">
-                <label class="russell">Russell Templet</label>
-            </a>
-            <div class="employee-contents">
-                <div class="employee-wipe">
-                    <img src="../svg/russell_cartoon.svg" width="300" height="175" />
-                    <div class="employee-title">&quot;Blah blah blah&quot;</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="employee">
-            <a href="#!/dillon">
-                <label class="dillon">Dillon Cordova</label>
-            </a>
-            <!--<img src="../img/chick.jpeg" width="300" height="175" />-->
         </div>
     </div>
 </div>
+
+<!-- animations -->
 <bubble-animation ng-repeat="i in homeCtrl.getNumber(10) track by $index" bubbleid="'bubble' + $index"></bubble-animation>
-<emerald-animation ng-repeat="j in homeCtrl.getNumber(15) track by $index"></emerald-animation>
+<emerald-animation ng-repeat="j in homeCtrl.getNumber(2) track by $index"></emerald-animation>
+<loading-animation></loading-animation>

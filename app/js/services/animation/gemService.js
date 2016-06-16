@@ -3,7 +3,6 @@
     
     .service('gemService', [function() {
         this.generateAnimation = function() {
-            debugger;
             var emeraldDirectives = $('emerald-animation');
             for (var i = 0, len = emeraldDirectives.length; i < len; i++) {
                 var emerald = emeraldDirectives[i].children[0];
@@ -29,5 +28,10 @@
                 emerald.removeAttribute('style');
             }
         };
+
+        this.getFadeAnimation = function() {
+            return 'fadeToGreen';
+        };
+
     }]);
 })();

@@ -1,11 +1,17 @@
 .gem {
     position: absolute;
-    z-index: 2;
+    z-index: -1;
     visibility: hidden;
 }
 
 @keyframes emeraldFall {
     to {
         top: 200%;
+    }
+}
+
+@keyframes fadeToGreen {
+    to {
+        background-color: rgba(17, 247, 82, 0.52);
     }
 }

@@ -5,7 +5,7 @@
 
     angular.module('app.homePage')
 
-    .controller('HomeController', ['$timeout', 'bubbleService', 'gemService', function ($timeout, bubbleService, gemService) {
+    .controller('HomeController', ['$timeout', 'dataService', 'bubbleService', 'gemService', function ($timeout, dataService, bubbleService, gemService) {
         var animationServiceMap = {
             lavi: gemService,
             russell: bubbleService
@@ -20,12 +20,18 @@
             });
         });
 
+        dataService.getPromise().then(function(response) {
+            scope.employees = response.data;
+        });
+
         this.handleEmployeeEnter = function(key) {
-            animationServiceMap[key].generateAnimation();
-            debugger;
+            var service = animationServiceMap[key];
+            $('#bg')[0].style.animation = service.getFadeAnimation() + ' 500ms forwards';
+            service.generateAnimation();
         };
 
         this.handleEmployeeLeave = function(key) {
+            $('#bg')[0].style.animation = 'fadeToDefault 500ms forwards';
             animationServiceMap[key].resetAnimation();
         };
 

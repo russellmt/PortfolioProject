@@ -62,8 +62,8 @@ angular.module('app.homePage')
         }
     };
 
-    this.getBackgroundColor = function() {
-        return 'rgba(0, 147, 227, 0.3)';
+    this.getFadeAnimation = function() {
+        return 'fadeToBlue';
     };
 
 }]);

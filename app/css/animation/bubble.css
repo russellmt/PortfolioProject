@@ -1,6 +1,6 @@
 .bubble {
     position: absolute;
-    z-index: 2;
+    z-index: -1;
     visibility: hidden;
 }
 
@@ -11,5 +11,11 @@
 @keyframes bubbleFloat {
     to {
         top: -150px;
+    }
+}
+
+@keyframes fadeToBlue {
+    to {
+        background-color: rgba(67, 182, 228, 0.5);
     }
 }
