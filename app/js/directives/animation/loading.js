@@ -4,6 +4,8 @@
 //note: only one loading animation can be created at a time -- id attribute is used to manipulate svg
 
 (function() {
+    'use strict';
+
     var ORDER = [
         'ball',
         'fan',
@@ -19,7 +21,7 @@
         'rectangle'
     ];
 
-    angular.module('app.homePage')
+    angular.module('app')
 
     .directive('loadingAnimation', function() {
         return {

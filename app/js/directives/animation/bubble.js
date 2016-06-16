@@ -1,7 +1,9 @@
 //pass in bubbleid so that an individual bubble can be manipulated
 
 (function() {
-    angular.module('app.homePage')
+    'use strict';
+
+    angular.module('app')
 
     .directive('bubbleAnimation', ['$timeout', function($timeout) {
         return {

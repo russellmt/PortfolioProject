@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    angular.module('app.dillonPage')
+    angular.module('app')
 
     .animation('.fade', [function() {
         return {

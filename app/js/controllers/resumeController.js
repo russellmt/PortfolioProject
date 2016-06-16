@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('app.dillonPage')
+    angular.module('app')
 
     .controller('resumeController', [function () {
         var me = this;

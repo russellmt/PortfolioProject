@@ -1,5 +1,7 @@
 (function() {
-    angular.module('app.homePage')
+    'use strict';
+
+    angular.module('app')
 
     .directive('emeraldAnimation', [function() {
         return {
