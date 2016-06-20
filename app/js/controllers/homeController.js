@@ -5,10 +5,11 @@
 
     angular.module('app')
 
-    .controller('HomeController', ['$timeout', 'dataService', 'bubbleService', 'gemService', function ($timeout, dataService, bubbleService, gemService) {
+    .controller('HomeController', ['$timeout', 'dataService', 'bubbleService', 'gemService', 'gooService', function ($timeout, dataService, bubbleService, gemService, gooService) {
         var animationServiceMap = {
             lavi: gemService,
-            russell: bubbleService
+            russell: bubbleService,
+            dillon: gooService
         };
 
         var scope = this;
@@ -16,7 +17,7 @@
             particleground(document.getElementById('bg'), {
                 dotColor: "#333333",
                 lineColor: "#B8E986",
-                density: 13000
+                density: 17000
             });
         });
 

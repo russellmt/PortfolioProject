@@ -10,12 +10,18 @@
 
 @keyframes gooFloatRight {
     to {
-        left: 100%;
+        left: 120%;
     }
 }
 
 @keyframes gooFloatLeft {
     to {
-        left: 0;
+        left: -20%;
+    }
+}
+
+@keyframes fadeToPurple {
+    to {
+        background-color: rgba(178, 77, 255, 0.5);
     }
 }
