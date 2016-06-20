@@ -1,0 +1,21 @@
+.goo {
+    position: absolute;
+    z-index: -1;
+    visibility: hidden;
+}
+
+.gooFrame2, .gooFrame3, .gooFrame4, .gooFrame5, .gooFrame6 {
+    visibility: hidden;
+}
+
+@keyframes gooFloatRight {
+    to {
+        left: 100%;
+    }
+}
+
+@keyframes gooFloatLeft {
+    to {
+        left: 0;
+    }
+}

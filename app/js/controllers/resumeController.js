@@ -6,9 +6,14 @@
     .controller('resumeController', [function () {
         var me = this;
         this.allTextLineOnjects = [];
+        this.eachCategoryObject = {};
 
         this.removeLine = function () {
             this.allTextLineOnjects.pop();
+        };
+
+        this.openSection = function(key) {
+            this.allTextLineOnjects = this.eachCategoryObject[key];
         };
 
         this.readFile = function (fileName) {
@@ -17,42 +22,44 @@
             rawFile.onreadystatechange = function () {
                 if(rawFile.readyState === 4) {
                     if(rawFile.status === 200 || rawFile.status == 0) {
-                        var resumeTextArray = rawFile.responseText.split('\n');
-                        resumeTextArray.reverse();
-
-                        for (var element in resumeTextArray) {
-                            var line = resumeTextArray[element];
-                            me.allTextLineOnjects.push({
-                                line: line
-                            });
-                        }
+                        me.allTextLineOnjects = me.formatRawFile(rawFile);
                     }
                 }
             };
             rawFile.send(null);
         };
 
-        this.readFile('../../../resumes/dillonResume.txt');
+        this.formatRawFile = function(_rawFile) {
+            var curCategory = '';
+            var subjectChar = '~';
+            var firstClass = 'fade';
+            var resumeTextArray = _rawFile.responseText.split('\n');
 
-        this.decodeLine = function(_curLine) {
-            var className = '';
-            var category = 'fade';
-            var bold = 'rotate';
+            var categoryLevel = new CategoryLevel();
 
-            for(var i = 0, length = _curLine.length; length > 1 && i < 2; i++) {
-                var char = _curLine[i];
+            for (var element in resumeTextArray) {
+                var curLine = resumeTextArray[element];
+                var char = curLine[0];
+
                 switch (char) {
-                    case '~':
-                        className += category;
+                    case subjectChar:
+                        curCategory = curLine;
+                        curCategory = curCategory.trim().slice(1, curCategory.length);
+                        this.eachCategoryObject[curCategory] = [];
+                        //categoryLevel.addCategory(curCategory);
                         break;
-
-                    case ':':
-                        className += className ? (' ' + bold): bold;
-                        return className;
+                    default:
+                        if(curCategory) {
+                            this.eachCategoryObject[curCategory].push({
+                                line: curLine,
+                                className: firstClass
+                            });
+                            //categoryLevel.addDataToLastCategory(curCategory, firstClass, curLine);
+                        }
                 }
             }
-            return className;
         };
 
+        this.readFile('../../../resumes/dillonResume.txt');
     }]);
 })();
