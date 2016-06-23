@@ -12,7 +12,6 @@
                 var randomSpawnLeft = Math.round(Math.random() * 85) + 10;
                 var randomSpawnTop = Math.round(Math.random() * 30) - 40;
                 var randomSize = Math.round(Math.random() * 80) + 20;
-                var randomOffset = Math.round(Math.random() * 300) - 150;
 
                 emerald.style.width = randomSize + 'px';
                 emerald.style.height = randomSize + 'px';
@@ -31,8 +30,8 @@
             }
         };
 
-        this.getFadeAnimation = function() {
-            return 'fadeToGreen';
+        this.getFadeAnimationClass = function() {
+            return 'gem-fading';
         };
 
     }]);

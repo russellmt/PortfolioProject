@@ -1,0 +1,15 @@
+@mixin animate-bg-fading($animationName, $color) {
+  @keyframes #{$animationName} {
+    to {
+      background-color: $color;
+    }
+  }
+  animation: $animationName 500ms forwards;
+}
+
+@mixin face-img-wipe ($top) {
+  transition-duration: 250ms;
+  -webkit-transition-duration: 250ms;
+  -moz-transition-duration: 250ms;
+  top: $top;
+}

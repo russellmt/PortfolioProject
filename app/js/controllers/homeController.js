@@ -27,12 +27,15 @@
 
         this.handleEmployeeEnter = function(key) {
             var service = animationServiceMap[key];
-            $('#bg')[0].style.animation = service.getFadeAnimation() + ' 500ms forwards';
+            $('#bg').addClass(service.getFadeAnimationClass());
             service.generateAnimation();
         };
 
         this.handleEmployeeLeave = function(key) {
-            $('#bg')[0].style.animation = 'fadeToDefault 500ms forwards';
+            $('#bg').removeClass('bubble-fading')
+                .removeClass('gem-fading')
+                .removeClass('goo-fading')
+                .addClass('default-fading');
             animationServiceMap[key].resetAnimation();
         };
 

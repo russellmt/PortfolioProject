@@ -1,0 +1,95 @@
+@import "partials/base";
+@import "partials/variables";
+@import "partials/mixins";
+
+.home-page {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: $transparent;
+}
+
+.default-fading {
+  @include animate-bg-fading(fade-to-default, $transparent);
+}
+
+.home-page-row {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 40%;
+
+  .employee {
+    width: 20%;
+    height: 15%;
+    margin: 2px;
+    display: inline-table;
+  }
+
+  label {
+    border: $labelBorder;
+    border-radius: 5px;
+    display: block;
+    padding: 5px;
+    text-align: center;
+    color: black;
+    background-color: $labelBackgroundGreen;
+    cursor: pointer;
+  }
+
+  label.lavi { }
+
+  label.russell {
+    /*background: linear-gradient(to bottom, #8cd89d, #a6ffb8);*/
+  }
+
+  label.dillon {
+    /*background: linear-gradient(to bottom, #9bc5e5, #addfff);*/
+  }
+
+  .employee {
+    .employee-wipe {
+      @include face-img-wipe(-250px);
+    }
+    &:hover {
+      .employee-wipe {
+        @include face-img-wipe(0);
+      }
+    }
+  }
+
+  a {
+    font-family: $railway;
+    font-weight: 100;
+    color: black;
+    &:hover {
+
+    }
+  }
+}
+
+.employee-contents {
+  overflow: hidden;
+
+  .employee-wipe {
+    position: relative;
+    top: -250px;
+  }
+}
+
+.employee-title {
+  font-family: $caviarDreams;
+}
+
+img.face {
+  width: 90%;
+}
+
+#bg {
+  @extend %full-screen-bg;
+}
+
+canvas{
+  position: absolute;
+  z-index: -1;
+}

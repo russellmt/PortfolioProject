@@ -1,24 +1,96 @@
+/* line 1, ../../sass/partials/_base.scss */
+#circle, #fan, #mushroom, #clamp, #cupcake, #cat, #blindcat, #hat, #blindhat, #note, #cross, #gem, #tooth, #bowtie, #scythe, #anemone, #dots, #rhombus, #rectangle {
+  visibility: hidden;
+}
+
+/* line 19, ../../sass/partials/_base.scss */
+body {
+  margin: 0;
+}
+
+/* line 23, ../../sass/partials/_base.scss */
+header {
+  font-weight: 200;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  background: linear-gradient(to bottom, #c2d1d1, #e1f0f0);
+  padding: 10px;
+  border-bottom: solid black 1px;
+  margin-bottom: 10px;
+}
+
+/* line 33, ../../sass/partials/_base.scss */
+a {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "Anson";
+  src: url(../fonts/anson-regular-webfont.woff);
+}
+@font-face {
+  font-family: "Caviar Dreams";
+  src: url(../fonts/CaviarDreams.ttf);
+}
+@font-face {
+  font-family: "Clear Sans";
+  src: url(../fonts/ClearSans-Regular-webfont.woff);
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url(../fonts/OpenSans-CondLight-webfont.woff);
+}
+@font-face {
+  font-family: "Raleway";
+  src: url(../fonts/Raleway-Regular.ttf);
+}
+@font-face {
+  font-family: "Raleway Thin";
+  src: url(../fonts/Raleway-Thin.ttf);
+}
+@keyframes bubbleFloat {
+  to {
+    top: -150px;
+  }
+}
+@keyframes emeraldFall {
+  to {
+    top: 200%;
+  }
+}
+@keyframes gooFloatRight {
+  to {
+    left: 120%;
+  }
+}
+@keyframes gooFloatLeft {
+  to {
+    left: -20%;
+  }
+}
+/* line 3, ../../sass/animation/loading.scss */
 .outer {
-    display: table;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: black;
+  display: table;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
 }
 
+/* line 11, ../../sass/animation/loading.scss */
 .middle {
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
 }
 
+/* line 17, ../../sass/animation/loading.scss */
 .inner {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    display: inline-block;
-}
-
-#circle, #fan, #mushroom, #clamp, #cupcake, #cat, #blindcat, #hat, #blindhat, #note, #cross, #gem, #tooth, #bowtie, #scythe, #anemone, #dots, #rhombus, #rectangle{
-    visibility: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: inline-block;
 }

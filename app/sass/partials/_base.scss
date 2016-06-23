@@ -1,20 +1,25 @@
-/* line 1, ../../sass/partials/_base.scss */
-.goo, .gooFrame2, .gooFrame3, .gooFrame4, .gooFrame5, .gooFrame6 {
+%svg-frames-start {
   visibility: hidden;
 }
 
-/* line 5, ../../sass/partials/_base.scss */
-.goo {
+%animation-start {
+  @extend %svg-frames-start;
   position: absolute;
   z-index: -1;
 }
 
-/* line 19, ../../sass/partials/_base.scss */
+%full-screen-bg {
+  background: no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 body {
   margin: 0;
 }
 
-/* line 23, ../../sass/partials/_base.scss */
 header {
   font-weight: 200;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -25,7 +30,6 @@ header {
   margin-bottom: 10px;
 }
 
-/* line 33, ../../sass/partials/_base.scss */
 a {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 200;
@@ -37,52 +41,52 @@ a {
   font-family: "Anson";
   src: url(../fonts/anson-regular-webfont.woff);
 }
+
 @font-face {
   font-family: "Caviar Dreams";
   src: url(../fonts/CaviarDreams.ttf);
 }
+
 @font-face {
   font-family: "Clear Sans";
   src: url(../fonts/ClearSans-Regular-webfont.woff);
 }
+
 @font-face {
   font-family: "Open Sans";
   src: url(../fonts/OpenSans-CondLight-webfont.woff);
 }
+
 @font-face {
   font-family: "Raleway";
   src: url(../fonts/Raleway-Regular.ttf);
 }
+
 @font-face {
   font-family: "Raleway Thin";
   src: url(../fonts/Raleway-Thin.ttf);
 }
+
 @keyframes bubbleFloat {
   to {
     top: -150px;
   }
 }
+
 @keyframes emeraldFall {
   to {
     top: 200%;
   }
 }
+
 @keyframes gooFloatRight {
   to {
     left: 120%;
   }
 }
+
 @keyframes gooFloatLeft {
   to {
     left: -20%;
-  }
-}
-/* line 13, ../../sass/animation/goo.scss */
-.goo-fading {
-  animation: fade-to-purple 500ms forwards;
-}
-@keyframes fade-to-purple {
-  to {
-    background-color: rgba(178, 77, 255, 0.5);
   }
 }

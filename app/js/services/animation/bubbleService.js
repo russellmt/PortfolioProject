@@ -32,8 +32,8 @@
             }
         };
 
-        this.getFadeAnimation = function() {
-            return 'fadeToBlue';
+        this.getFadeAnimationClass = function() {
+            return 'bubble-fading';
         };
 
     }]);

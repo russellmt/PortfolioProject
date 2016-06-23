@@ -1,0 +1,15 @@
+@import "../partials/base";
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.bubble {
+  @extend %animation-start;
+}
+
+.bubbleFrame2, .bubbleFrame3 {
+  @extend %svg-frames-start;
+}
+
+.bubble-fading {
+  @include animate-bg-fading(fade-to-blue, $transparentBlue);
+}
