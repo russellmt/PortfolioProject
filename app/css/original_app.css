@@ -1,0 +1,73 @@
+/* Sass */
+/* Element */
+body {
+  background: url("../images/space_background.jpg");
+  background-size: cover; }
+
+/* Class */
+.Bullet {
+  border: 1px solid black;
+  border-radius: 25px;
+  background-color: red;
+  height: 25px;
+  width: 2px; }
+
+.Enemy {
+  background: url("../images/asteroid.png");
+  background-size: contain;
+  height: 40px;
+  position: absolute;
+  transition: transform 2s linear;
+  width: 40px; }
+
+.Enemy.Animating {
+  transform: rotate(720deg); }
+
+.Line {
+  border: 1px solid black;
+  background: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  width: 100%; }
+
+.Middle {
+  display: table-cell;
+  vertical-align: middle; }
+
+.Outer {
+  width: 100%;
+  height: 100%;
+  display: table;
+  position: absolute; }
+
+/* I.D. */
+#animationDisplay {
+  width: 500px;
+  height: 80%;
+  position: relative;
+  margin: auto; }
+
+#controls {
+  margin: 10px auto;
+  padding: 20px;
+  position: relative;
+  display: block;
+  margin: auto;
+  text-align: center; }
+
+#movementControls {
+  margin: 10px auto; }
+
+#ship {
+  background: url("../images/silvership.png");
+  background-size: contain;
+  position: absolute;
+  display: inline-block;
+  left: 235px;
+  width: 40px;
+  height: 40px;
+  bottom: 0; }
+
+#shootControls {
+  margin: 10px auto; }
+
+/*# sourceMappingURL=app.css.map */
