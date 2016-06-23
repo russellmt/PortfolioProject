@@ -1,9 +1,9 @@
 {
-  "name": "angular-seed",
+  "name": "portfolio-project",
   "private": true,
-  "version": "0.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "version": "0.0.1",
+  "description": "Portfolio site for 3 developers",
+  "repository": "https://github.com/russellmt/PortfolioProject",
   "license": "MIT",
   "devDependencies": {
     "bower": "^1.7.7",

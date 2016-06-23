@@ -1,8 +1,8 @@
 {
-  "name": "angular-seed",
-  "description": "A starter project for AngularJS",
-  "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-seed",
+  "name": "portfolio-project",
+  "description": "Portfolio site for 3 developers",
+  "version": "0.0.1",
+  "homepage": "https://github.com/russellmt/PortfolioProject",
   "license": "MIT",
   "private": true,
   "dependencies": {
