@@ -1,0 +1,15 @@
+@import "../partials/base";
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.goo {
+  @extend %animation-start;
+}
+
+.gooFrame2, .gooFrame3, .gooFrame4, .gooFrame5, .gooFrame6 {
+  @extend %svg-frames-start;
+}
+
+.goo-fading {
+  @include animate-bg-fading(fade-to-purple, $transparentPurple);
+}

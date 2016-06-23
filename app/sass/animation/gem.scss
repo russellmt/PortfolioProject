@@ -1,0 +1,11 @@
+@import "../partials/base";
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.gem {
+  @extend %animation-start;
+}
+
+.gem-fading {
+  @include animate-bg-fading(fade-to-green, $transparentGreen);
+}

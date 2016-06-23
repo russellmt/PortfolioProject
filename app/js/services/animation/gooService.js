@@ -10,8 +10,8 @@
             for (var i = 0, len = gooDirectives.length; i < len; i++) {
                 var goo = gooDirectives[i].children[0];
 
-                var randomSpawnTop = Math.round(Math.random() * 100);
-                var randomSize = Math.round(Math.random() * 100) + 100;
+                var randomSpawnTop = Math.round(Math.random() * 60);
+                var randomSize = Math.round(Math.random() * 100) + 500;
                 var randomSpeed = Math.round(Math.random() * 2) + 5;
 
                 var ran = Math.round(Math.random());
@@ -40,8 +40,8 @@
             }
         };
 
-        this.getFadeAnimation = function() {
-            return 'fadeToPurple';
+        this.getFadeAnimationClass = function() {
+            return 'goo-fading';
         };
 
     }]);
