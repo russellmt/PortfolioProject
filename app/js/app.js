@@ -1,7 +1,7 @@
 (function() {
     'use strict';
 
-    angular.module('app', ['ngRoute'])
+    angular.module('app', ['ngRoute', 'ngAnimate'])
 
     .config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
         $locationProvider.hashPrefix('!');
@@ -21,9 +21,9 @@
         })
 
         .when('/dillon', {
-            templateUrl: 'partials/dillonPage.html',
-            controller: 'resumeController',
-            controllerAs: 'resumeCtrl'
+            templateUrl: 'partials/gameDisplay.html',
+            controller: 'GameController',
+            controllerAs: 'gameCtrl'
         })
 
         .otherwise({

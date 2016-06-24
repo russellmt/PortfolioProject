@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  angular.module('app.dillonPage').constant('AnimationConstants', {
+  angular.module('app').constant('AnimationConstants', {
     BULLET_WIDTH: 5,
     ENEMY_SKYDIVE_DELAY: 1500,
     ENEMY_SKY_DIVE_DURATION: 1000,

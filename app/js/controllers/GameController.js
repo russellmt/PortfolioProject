@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  angular.module('app.dillonPage')
+  angular.module('app')
   .controller('GameController', ['$interval', '$scope', '$timeout', '$q', 'AnimationConstants', function($interval, $scope, $timeout, $q, AnimationConstants) {
     var moveTime = AnimationConstants.MOVE_TIME;
     var fadeTime = AnimationConstants.FADE_TIME;
