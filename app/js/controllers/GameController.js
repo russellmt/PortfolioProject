@@ -139,7 +139,7 @@
 
     function getLastLineElementBottom() { // Possible change.
       var lastLineElement = $('.Line').last();
-      return lastLineElement.offset().top + lastLineElement.height();
+      return lastLineElement//.offset().top + lastLineElement.height();
     }
 
     function getPathConfigurations() {
