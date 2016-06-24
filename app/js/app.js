@@ -23,7 +23,7 @@
         .when('/dillon', {
             templateUrl: 'partials/gameDisplay.html',
             controller: 'GameController',
-            controllerAs: 'gameCtrl'
+            controllerAs: 'GameCtrl'
         })
 
         .otherwise({
