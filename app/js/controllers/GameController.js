@@ -4,8 +4,8 @@
     .controller('GameController', ['$interval', '$scope', '$timeout', '$q', 'AnimationConstants', function ($interval, $scope, $timeout, $q, AnimationConstants) {
         var moveTime = AnimationConstants.MOVE_TIME;
         var fadeTime = AnimationConstants.FADE_TIME;
-        var shipCssSelector = '#ship';
         var displayCssSelector = '#animationDisplay';
+        var shipCssSelector = '#ship';
 
         var me = this;
 
@@ -30,13 +30,12 @@
         });
 
         //==== Functions ====//
-
         function animateBullet(bulletElement) {
             var bulletElement = $('.Bullet');
             var moveAnimationConfiguration = {
                 top: getLastLineElementBottom() // Possible change.
             };
-            bulletElement.animate(moveAnimationConfiguration, 250, function () {
+            bulletElement.animate(moveAnimationConfiguration, 400, function () {
                 bulletElement.remove()
             });
         }
@@ -94,7 +93,7 @@
             var cssConfiguration = {
                 left: initialLeft,
                 top: initialTop
-            }
+            };
             enemyElement.css(cssConfiguration);
             var pathClass;
             var pathClasses = AnimationConstants.PATH_CLASSES;
@@ -127,7 +126,8 @@
             if (!me.shipIsFiring) {
                 me.shipIsFiring = true;
                 return $q(function (resolve, reject) {
-                    animateBullet(createBullet());
+                    createBullet();
+                    animateBullet();
                     me.shipIsFiring = false;
                     resolve('BulletAnimationComplete');
                 });
@@ -213,10 +213,7 @@
             var lineElements = me.allTextLineOnjects;
             if (angular.isDefined(lineElements) && lineElements.length > 0) {
                 fireBullet().then(function () {
-                    lineElements.splice(lineElements.length - 1, 1);
-                    $timeout(function () {
-                        // lineElements.splice(0, 0, LineFactory.createRandomLine());
-                    }, fadeTime + 100);
+                    lineElements.pop();
                 }, function () {
                 });
             }
@@ -227,7 +224,7 @@
             $('body').append(enemyElement);
             var skydiveAnimationCss = {
                 top: $(shipCssSelector).offset().top
-            }
+            };
             enemyElement.addClass('Animating');
             enemyElement.animate(skydiveAnimationCss, AnimationConstants.ENEMY_SKY_DIVE_DURATION, 'linear', function () {
                 var shipElement = $(shipCssSelector);
