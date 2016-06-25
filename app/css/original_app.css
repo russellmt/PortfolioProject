@@ -1,4 +1,7 @@
 /* Sass */
+/* Lavi's Theme */
+/* Russell's Theme */
+/* Dillon's Theme */
 /* Element */
 body {
   background: url("../images/space_background.jpg");
@@ -26,7 +29,7 @@ body {
 .Line {
   border: 1px solid black;
   background: rgba(255, 255, 255, 0.5);
-  text-align: center;
+  text-align: left;
   width: 100%; }
 
 .Middle {
@@ -51,7 +54,6 @@ body {
   padding: 20px;
   position: relative;
   display: block;
-  margin: auto;
   text-align: center; }
 
 #movementControls {
@@ -69,5 +71,3 @@ body {
 
 #shootControls {
   margin: 10px auto; }
-
-/*# sourceMappingURL=app.css.map */

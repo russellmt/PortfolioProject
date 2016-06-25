@@ -1,0 +1,135 @@
+/* Sass */
+
+$asteroidUrl: url("../images/asteroid.png");
+$bulletBackground: url("../images/missile.png");
+$bulletWidth: 2px;
+$bulletHeight: 25px;
+$displayWidth: 500px;
+$displayHeight: 80%;
+$enemyHeight: 40px;
+$enemyWidth: 40px;
+$shipWidth: 40px;
+$shipHeight: 40px;
+$shipUrl: url("../images/silvership.png");
+$spaceBackgroundUrl: url("../images/space_background.jpg");
+
+/* Lavi's Theme */
+$laserMachineImage: 0;
+/* Russell's Theme */
+$bubbleBlasterImage: 0;
+/* Dillon's Theme */
+$bowAndArrowImage: 0;
+
+@mixin bulletBorderRadius() {
+  border-radius: 25px;
+}
+
+@mixin defaultBorder() {
+  border: 1px solid black;
+}
+
+@mixin defaultMargin() {
+  margin: 10px auto;
+}
+
+@mixin displayWidthAndHeight() {
+  width: $displayWidth;
+  height: $displayHeight;
+}
+
+@mixin transparentBackground() {
+  background: rgba(255, 255, 255, .5);
+}
+
+/* Element */
+
+body {
+  background: $spaceBackgroundUrl;
+  background-size: cover;
+}
+
+/* Class */
+
+.Lavi {}
+.Russell {}
+.Dillon {}
+
+.Bullet {
+  @include defaultBorder();
+  @include bulletBorderRadius();
+  background-color: red;
+  height: $bulletHeight;
+  width: $bulletWidth;
+}
+
+.Enemy {
+  background: $asteroidUrl;
+  background-size: contain;
+  height: $enemyHeight;
+  position: absolute;
+  transition: transform 2s linear;
+  width: $enemyWidth;
+}
+
+.Enemy.Animating {
+  transform: rotate(720deg);
+}
+
+.Line {
+  @include defaultBorder();
+  @include transparentBackground();
+  text-align: left;
+  width: 100%;
+}
+
+.Middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.Outer {
+  width: 100%;
+  height: 100%;
+  display: table;
+  position: absolute;
+}
+
+/* I.D. */
+
+#animationDisplay {
+  @include displayWidthAndHeight();
+  position: relative;
+  margin: auto;
+}
+
+#controls {
+  @include defaultMargin();
+  padding: 20px;
+  position: relative;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+#movementControls {
+  @include defaultMargin();
+}
+
+#ship {
+  background: $shipUrl;
+  background-size: contain;
+  position: absolute;
+  display: inline-block;
+  left: ($displayWidth / 2) - ($shipWidth / 2) + 5;
+  width: $shipWidth;
+  height: $shipHeight;
+  bottom: 0;
+}
+
+.Lavi #ship {}
+.Russell #ship {}
+.Dillon #ship {}
+
+#shootControls {
+  @include defaultMargin();
+}
